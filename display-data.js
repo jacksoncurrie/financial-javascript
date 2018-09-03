@@ -46,7 +46,7 @@ for(var i = 0; i < volumes.length; i++) {
     // Moving average
     var movingAverage = totalCost / totalVolume;
     var movingAverageRound = +(Math.round(movingAverage + "e+4")  + "e-4");
-    row.innerHTML += '<td>' + movingAverageRound.toFixed(4) + '</td>';
+    row.innerHTML += '<td>$' + movingAverageRound.toFixed(4) + '</td>';
 
     // Profit
     var profit = 100 - (100 * movingAverage / costPerShare)
