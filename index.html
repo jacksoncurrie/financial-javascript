@@ -1,27 +1,62 @@
 <!DOCTYPE html>
+
+<!--
+    Author      : Jackson Currie
+    Date        : 2018-09-04
+    Description : Website for controlling shares
+-->
+
 <html lang="en">
+
 <head>
+    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" defer></script>
+    <script src="graph.js" defer></script>
     <script src="display-data.js" defer></script>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="main.css">
+
+    <!-- Title -->
     <link rel="shortcut icon" href="http://lametro.edu.ec/wp-content/uploads/2017/03/cropped-favicon.png" type="image/png">
     <title>Financial Information</title>
 </head>
+
 <body>
+    <!-- Titles -->
     <header>
         <h1>Financial Information</h1>
         <h2>COMP.5210 Assessment</h2>
+        <h4>Files found <a href="https://github.com/jacksoncurrie/financial-javascript">here</a></h4>
     </header>
 
     <main>
+        <!-- Form for adding shares -->
+        <form onsubmit="addShares(document.getElementById('volume').value, document.getElementById('share').value);return false">
+            <p>Volume<br><input type="number" name="volume" id="volume"></p>
+            <p>Price Per Share<br><input type="number" step="0.01" name="share" id="share"></p><br>
+            <button type="submit">Add Shares</button>
+        </form>
+
+        <!-- Table of shares -->
         <table></table>
-        <p>Files found <a href="https://github.com/jacksoncurrie/financial-javascript">here</a></p>
+
+        <!-- Remove data in table -->
+        <button type="button" onclick="clearTable();removeData()">Clear Table</button>
+
+        <!-- Graph -->
+        <div><canvas id="myGraph"></canvas></div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; Jackson Currie, 2018.</p>
     </footer>
 </body>
+
 </html>
