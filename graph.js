@@ -23,14 +23,14 @@ var chart = new Chart(ctx, {
         datasets: [
             {
                 label: "Price",
-                borderColor: '#F00',
+                borderColor: '#0BF',
                 fill: false,
                 data: [],
                 lineTension: 0
             },
             {
                 label: "Average",
-                borderColor: '#0F0',
+                borderColor: '#05F',
                 fill: false,
                 data: [],
                 lineTension: 0
