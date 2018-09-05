@@ -35,10 +35,6 @@ button:hover {
     cursor: pointer;
 }
 
-button:active {
-    background-color: #06F;
-}
-
 /* Inputs */
 
 input:focus {
