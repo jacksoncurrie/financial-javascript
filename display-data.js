@@ -58,7 +58,7 @@ var addShares = (volume, share) => {
     profit = +(Math.round(profit + "e+7")  + "e-7")
     row.innerHTML += '<td>' + profit + '%</td>';
 
-    addData(costPerShare, movingAverage);
+    addData(costPerShare, movingAverageRound);
 }
 
 // Clear table
