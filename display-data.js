@@ -50,8 +50,8 @@ var addShares = (volume, share) => {
 
     // Moving average
     var movingAverage = totalCost / totalVolume;
-    movingAverage = +(Math.round(movingAverage + "e+4")  + "e-4");
-    row.innerHTML += '<td>' + movingAverage + '</td>';
+    var movingAverageRound = +(Math.round(movingAverage + "e+4")  + "e-4");
+    row.innerHTML += '<td>' + movingAverageRound + '</td>';
 
     // Profit
     var profit = 100 - (100 * movingAverage / costPerShare)
