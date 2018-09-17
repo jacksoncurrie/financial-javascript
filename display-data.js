@@ -8,7 +8,7 @@
 var heading = document.getElementsByTagName("table")[0];
 
 // Add headings
-heading.innerHTML = '<thead><tr><th>Volume</th><th>Price Per Share</th><th>Transaction Cost</th><th>Total Cost</th><th>Total Volume Held</th><th>Moving Average</th><th>Profit/Loss</th></tr></thead><tbody></tbody>';
+heading.innerHTML = '<thead><tr><th>Volume</th><th>Price Per Share</th><th class="hidden">Transaction Cost</th><th class="hidden">Total Cost</th><th class="hidden">Total Volume Held</th><th>Moving Average</th><th>Profit/Loss</th></tr></thead><tbody></tbody>';
 
 // Total running cost and volumes
 var totalCost = 0;
@@ -38,15 +38,15 @@ var addShares = (volume, share) => {
 
     // Transaction cost
     var transactionCost = +(Math.round(volume * share + "e+2")  + "e-2");
-    row.innerHTML += '<td>$' + transactionCost.toFixed(2) + '</td>';
+    row.innerHTML += '<td class="hidden">$' + transactionCost.toFixed(2) + '</td>';
 
     // Total cost
     totalCost += +transactionCost;
-    row.innerHTML += '<td>$' + totalCost.toFixed(2) + '</td>';
+    row.innerHTML += '<td class="hidden">$' + totalCost.toFixed(2) + '</td>';
 
     // Total volume
     totalVolume += +volume;
-    row.innerHTML += '<td>' + totalVolume + '</td>';
+    row.innerHTML += '<td class="hidden">' + totalVolume + '</td>';
 
     // Moving average
     var movingAverage = totalCost / totalVolume;
