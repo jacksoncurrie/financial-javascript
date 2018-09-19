@@ -33,13 +33,10 @@ button {
 button:hover, button:focus {
     background-color: #0BF;
     cursor: pointer;
+    outline: none;
 }
 
 /* Inputs */
-
-input:focus {
-    outline: none;
-}
 
 input {
     margin-top: 10px;
