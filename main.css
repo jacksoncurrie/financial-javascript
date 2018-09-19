@@ -48,7 +48,8 @@ input {
 }
 
 input:hover, input:focus {
-    border-bottom: 2px solid #0CF; 
+    border-bottom: 2px solid #0CF;
+    outline: none;
 }
 
 a {
