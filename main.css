@@ -7,7 +7,6 @@
 * {
     text-align: center;
     font-family: sans-serif;
-    
 }
 
 form p {
@@ -85,12 +84,14 @@ th {
     color: white;
 }
 
-/* graph */
+/* Graph */
 
 div {
     max-width: 700px;
     margin: auto;
 }
+
+/* Smaller devices */
 
 @media screen and (max-width: 800px) {
     form p {
