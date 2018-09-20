@@ -34,7 +34,7 @@ var addShares = (volume, share) => {
 
     // Cost per share
     var costPerShare = +(Math.round(share + "e+2")  + "e-2")
-    row.innerHTML += '<td class="price">$' + costPerShare.toFixed(2) + '</td>';
+    row.innerHTML += '<td>$' + costPerShare.toFixed(2) + '</td>';
 
     // Transaction cost
     var transactionCost = +(Math.round(volume * share + "e+2")  + "e-2");
@@ -68,6 +68,9 @@ var clearTable = () => {
     table.innerHTML = '';
     totalCost = 0;
     totalVolume = 0;
+    
+    // Reset graph
+    removeData();
 }
 
 // Set volumes and prices
